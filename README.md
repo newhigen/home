@@ -1,28 +1,15 @@
 # resume.sungd.uk
 
-조성덕 이력서 공개 페이지. 정적 파일(`index.html` + `resume.pdf`) 그대로 GitHub Pages로 서빙.
+조성덕 이력서 공개 페이지. 정적 파일 그대로 GitHub Pages로 서빙.
 
-## 마스터가 진실 — 여기는 산출물
+## 지금 상태 (2026-07-25)
 
-내용을 직접 고치지 말 것. 진짜 원본은 `dev/apps/resume` (`master/*.yaml`)에 있고, 이 저장소의
-`index.html`·`resume.pdf`는 거기서 빌드해 복사해 넣은 결과물이다.
+기존 tech.sungd.uk/resume/ 페이지의 포맷·내용을 그대로 옮겨왔다(도메인만 분리).
+`fonts/Inter.woff2`·`favicon.svg`도 그 페이지에서 가져온 것.
 
-## 갱신 방법
-
-`dev/apps/resume`에서 master 내용을 고친 뒤:
-
-```sh
-cd dev/apps/resume
-node build/build.mjs --mode onepage --plain --public \
-  --dlbar "이력서 PDF=./resume.pdf" --pdf --out resume
-
-cp out/resume.html ../../sites/resume/index.html
-cp out/resume.pdf  ../../sites/resume/resume.pdf
-```
-
-1페이지 요약본만 배포한다(경력기술서 상세·포트폴리오는 제외 — 2026-07-25 결정).
-
-그다음 이 저장소에서 커밋·푸시하면 GitHub Pages가 자동 반영한다.
+`dev/apps/resume`(master 파이프라인)에 더 최신·상세한 이력 데이터가 있지만,
+**내용을 어떻게 반영할지는 아직 정하지 않았다** — 사용자와 상의 후 결정. 그전까지
+`index.html`을 직접 손으로 고쳐도 된다(지금은 master 산출물이 아니라 이 옛 페이지의 스냅샷).
 
 ## 배포
 
