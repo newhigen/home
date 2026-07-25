@@ -133,12 +133,28 @@ html[lang="ko"] .section-title { font-size: 0.9375rem; letter-spacing: 0.01em; }
 }
 .scholar:hover { opacity: 1; }
 
-/* ── 경력 ── */
+/* ── 경력 ──
+   넓은 화면: 직무 · 소속 · 기간을 한 줄에 두고, 재직 햇수는 기간 아래 작게.
+   좁은 화면: 직무|기간 / 소속|햇수 두 줄로 접는다. */
 .jobs { display: flex; flex-direction: column; gap: 0.875rem; }
-.job-row { display: grid; grid-template-columns: auto 1fr auto; gap: 1rem; align-items: baseline; }
-.job-role { font-size: 0.9375rem; font-weight: 600; }
-.job-org { font-size: 0.875rem; color: var(--text-secondary); }
-.job-period { font-size: 0.8125rem; color: var(--text-tertiary); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.job-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0 1rem;
+  align-items: baseline;
+}
+.job-role { grid-column: 1; grid-row: 1; font-size: 0.9375rem; font-weight: 600; }
+.job-org { grid-column: 2; grid-row: 1; font-size: 0.875rem; color: var(--text-secondary); }
+.job-dates {
+  grid-column: 3; grid-row: 1;
+  font-size: 0.8125rem; color: var(--text-tertiary);
+  white-space: nowrap; text-align: right; font-variant-numeric: tabular-nums;
+}
+.job-dur {
+  grid-column: 3; grid-row: 2;
+  font-size: 0.75rem; color: var(--text-tertiary);
+  white-space: nowrap; text-align: right; font-variant-numeric: tabular-nums;
+}
 .job-desc { margin: 0.25rem 0 0; font-size: 0.875rem; color: var(--text-secondary); }
 
 /* ── 학력·언어 ── */
@@ -184,7 +200,7 @@ html[lang="ko"] .section-title { font-size: 0.9375rem; letter-spacing: 0.01em; }
   .nav {
     flex-direction: row;
     gap: 0.9rem;
-    margin: 1rem calc(var(--gutter) * -1) 0;
+    margin: 1rem calc(var(--gutter) * -1) 1.35rem;
     padding: 0.6rem var(--gutter);
     position: sticky;
     top: 0;
@@ -208,10 +224,12 @@ html[lang="ko"] .section-title { font-size: 0.9375rem; letter-spacing: 0.01em; }
   body { padding: 1.75rem var(--gutter) 4rem; }
   .name { font-size: 1.3rem; }
 
-  /* 직무는 한 줄 통으로, 그 아래 소속(왼쪽) + 기간(오른쪽) */
-  .job-row { grid-template-columns: 1fr auto; gap: 0.125rem 0.75rem; }
-  .job-role { grid-column: 1 / -1; }
-  .job-period { text-align: right; }
+  /* 직무|기간 한 줄, 소속|햇수 한 줄 */
+  .job-row { grid-template-columns: 1fr auto; gap: 0.15rem 0.75rem; }
+  .job-role { grid-column: 1; grid-row: 1; }
+  .job-dates { grid-column: 2; grid-row: 1; }
+  .job-org { grid-column: 1; grid-row: 2; }
+  .job-dur { grid-column: 2; grid-row: 2; }
 
   .row { font-size: 0.8125rem; gap: 0.6rem; }
   .row-org, .row-period { font-size: 0.75rem; }
