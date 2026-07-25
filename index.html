@@ -48,7 +48,10 @@ a { color: inherit; }
   h1 { font-size: 1.3rem !important; }  /* 이름은 더 많이 — 모바일에선 28px가 과함 */
   h1 span { font-size: 0.9rem !important; }
   .meta-row { flex-wrap: wrap; gap: 0 0.75rem; }  /* 좁으면 이메일이 아랫줄로 — 직함과 붙는 것 방지 */
-  .job-row { grid-template-columns: 1fr !important; gap: 0.125rem !important; }
+  /* 직무는 한 줄 통으로, 그 아래 회사(왼쪽) + 기간(오른쪽) 한 줄 */
+  .job-row { grid-template-columns: 1fr auto !important; gap: 0.125rem 0.75rem !important; }
+  .job-row > :first-child { grid-column: 1 / -1; }
+  .job-row > :last-child { text-align: right; }
 }
 </style>
 </head>
