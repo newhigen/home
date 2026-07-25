@@ -116,10 +116,12 @@ sup {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--accent);
-  font-family: var(--mono);
   white-space: nowrap;
 }
 .rule { flex: 1; height: 1px; background: var(--border); }
+/* 한글 제목은 대문자 효과를 못 받아 상대적으로 작아 보인다.
+   자간을 줄이고 크기를 한 단계 올려 균형을 맞춘다. */
+html[lang="ko"] .section-title { font-size: 0.9375rem; letter-spacing: 0.01em; }
 
 .scholar {
   display: flex;
