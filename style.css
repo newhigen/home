@@ -64,11 +64,6 @@ sup {
   font-weight: 700;
   letter-spacing: -0.01em;
 }
-.name-alt {
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: var(--text-secondary);
-}
 /* 언어 전환 — 누를 수 있는 컨트롤로 읽히게 테두리를 준다 */
 .lang {
   flex-shrink: 0;
@@ -187,7 +182,6 @@ sup {
   html { font-size: 14.5px; }              /* rem 전체를 한 단계 축소 */
   body { padding: 1.75rem 1.125rem 4rem; }
   .name { font-size: 1.3rem; }             /* 이름은 더 많이 — 모바일에서 28px는 과함 */
-  .name-alt { font-size: 0.9rem; }
 
   .meta-row { flex-wrap: wrap; gap: 0 0.75rem; }   /* 좁으면 이메일이 아랫줄로 */
 
