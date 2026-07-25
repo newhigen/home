@@ -13,12 +13,14 @@
 
 ```sh
 cd dev/apps/resume
-node build/build.mjs --mode combined --side --plain --public \
-  --dlbar "이력서·경력기술서 PDF=./resume.pdf" --pdf --out resume
+node build/build.mjs --mode onepage --plain --public \
+  --dlbar "이력서 PDF=./resume.pdf" --pdf --out resume
 
 cp out/resume.html ../../sites/resume/index.html
 cp out/resume.pdf  ../../sites/resume/resume.pdf
 ```
+
+1페이지 요약본만 배포한다(경력기술서 상세·포트폴리오는 제외 — 2026-07-25 결정).
 
 그다음 이 저장소에서 커밋·푸시하면 GitHub Pages가 자동 반영한다.
 
