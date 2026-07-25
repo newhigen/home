@@ -19,6 +19,7 @@
   --border: rgba(10, 14, 20, 0.1);
   --accent: #2f5fd0;              /* 섹션 제목에만. 본문·강조는 뉴트럴로 둔다 */
   --bg-blur: rgba(247, 248, 250, 0.86);
+  --bg-fade: rgba(247, 248, 250, 0);
   --gutter: 1.5rem;          /* 페이지 좌우 여백. 상단 고정 이동줄의 bleed 폭과 같아야 한다 */
 }
 @media (prefers-color-scheme: dark) {
@@ -31,6 +32,7 @@
     --border: rgba(233, 238, 245, 0.11);
     --accent: #7fa5f5;            /* 어두운 바탕에서 같은 파랑은 가라앉아 한 단계 밝게 */
     --bg-blur: rgba(17, 19, 24, 0.86);
+    --bg-fade: rgba(17, 19, 24, 0);
   }
 }
 
@@ -200,22 +202,21 @@ html[lang="ko"] .section-title { font-size: 0.9375rem; letter-spacing: 0.01em; }
   .nav {
     flex-direction: row;
     gap: 0.9rem;
-    margin: 1rem calc(var(--gutter) * -1) 1.35rem;
-    padding: 0.6rem var(--gutter);
+    margin: 1rem calc(var(--gutter) * -1) 0.6rem;
+    padding: 0.6rem var(--gutter) 1.4rem;
     position: sticky;
     top: 0;
     z-index: 5;
-    background: var(--bg-blur);
-    backdrop-filter: saturate(180%) blur(12px);
-    -webkit-backdrop-filter: saturate(180%) blur(12px);
-    border-bottom: 1px solid var(--border);
+    /* 아래로 갈수록 투명해져 본문이 지나가는 게 비친다.
+       nav 이 가로 스크롤 컨테이너라 아래에 붙인 가상요소는 잘린다 — 배경으로 처리한다. */
+    background: linear-gradient(to bottom, var(--bg) 0%, var(--bg) 62%, var(--bg-fade) 100%);
     overflow-x: auto;
     scrollbar-width: none;
   }
   .nav::-webkit-scrollbar { display: none; }
   .nav a { white-space: nowrap; }
 
-  .section { scroll-margin-top: 3.2rem; }
+  .section { scroll-margin-top: 3.6rem; }
 }
 
 @media (max-width: 480px) {
