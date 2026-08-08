@@ -9,7 +9,7 @@ index.html      한국어
 en/index.html   영어
 style.css       두 페이지 공용 스타일 (여기서만 디자인 수정)
 script.js       재직 기간 자동 계산 — <html lang>에 따라 "4년 5개월" / "4 yrs 5 mos"
-fonts/          Inter (tech.sungd.uk에서 가져옴)
+fonts/          Inter (sungd.uk 사이트에서 가져옴)
 ```
 
 두 언어 페이지는 **같은 구조·같은 클래스**를 쓴다. 한쪽 내용을 고치면 다른 쪽도 같이 고칠 것.
@@ -17,8 +17,9 @@ fonts/          Inter (tech.sungd.uk에서 가져옴)
 
 ## 지금 상태 (2026-07-25)
 
-기존 tech.sungd.uk/resume/ 페이지의 포맷·내용을 그대로 옮겨온 뒤 다듬은 것.
-`dev/apps/resume`(master 파이프라인)에 더 최신·상세한 이력 데이터가 있지만,
+옛 tech.sungd.uk/resume/ 페이지의 포맷·내용을 그대로 옮겨온 뒤 다듬은 것.
+그 사이트는 지금 sungd.uk 이고, tech.sungd.uk 주소는 없어졌다.
+`dev/resume-studio`(master 파이프라인)에 더 최신·상세한 이력 데이터가 있지만,
 **무엇을 반영할지는 아직 정하지 않았다** — 사용자와 상의 후 결정. 그전까지 이 저장소의
 HTML을 직접 고쳐도 된다(master 산출물이 아니라 손으로 관리하는 페이지).
 
