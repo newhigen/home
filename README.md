@@ -17,7 +17,7 @@ CNAME         sungd.uk
 | [sungd.uk](https://sungd.uk)                     | 랜딩 (이 repo)                    | home         |
 | [resume.sungd.uk](https://resume.sungd.uk)       | 이력서 + 프로젝트                 | resume       |
 | [writing.sungd.uk](https://writing.sungd.uk)     | 글 — 책·생각·기술                 | blog-writing |
-| [today.sungd.uk](https://today.sungd.uk)         | Claude Code·Codex 릴리스 큐레이션 | ai-pick      |
+| [ai.sungd.uk](https://ai.sungd.uk)               | Claude Code·Codex 릴리스 큐레이션 | ai-pick      |
 
 ## 로컬 확인
 
