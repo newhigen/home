@@ -12,12 +12,16 @@ CNAME         sungd.uk
 
 ## 사이트 구성
 
-| 주소                                             | 내용                              | repo         |
-| ------------------------------------------------ | --------------------------------- | ------------ |
-| [sungd.uk](https://sungd.uk)                     | 랜딩 (이 repo)                    | home         |
-| [resume.sungd.uk](https://resume.sungd.uk)       | 이력서 + 프로젝트                 | resume       |
-| [writing.sungd.uk](https://writing.sungd.uk)     | 글 — 책·생각·기술                 | blog-writing |
-| [ai.sungd.uk](https://ai.sungd.uk)               | Claude Code·Codex 릴리스 큐레이션 | ai-pick      |
+이 표는 여기에만 둔다. 다른 repo 의 README 는 자기 사이트만 설명한다.
+
+| 주소                                         | 내용                              | repo    |
+| -------------------------------------------- | --------------------------------- | ------- |
+| [sungd.uk](https://sungd.uk)                 | 랜딩 (이 repo)                    | home    |
+| [resume.sungd.uk](https://resume.sungd.uk)   | 이력서 + 프로젝트                 | resume  |
+| [writing.sungd.uk](https://writing.sungd.uk) | 글 — 책·생각·기술                 | writing |
+| [ai.sungd.uk](https://ai.sungd.uk)           | Claude Code·Codex 릴리스 큐레이션 | ai-pick |
+
+`tech.sungd.uk` 는 2026-08-09 재편 때 없어졌다. 기술 글은 writing 으로, 프로젝트는 resume 로 갔다.
 
 ## 로컬 확인
 
